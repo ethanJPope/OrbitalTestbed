@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class OrbitCalculator : MonoBehaviour
 {
+    [Header("Orbit Parts")]
     public float apogee;
     public float perigee;
     public float inclination;
@@ -10,22 +11,24 @@ public class OrbitCalculator : MonoBehaviour
     public float trueAnomaly;
     public float argOfPerigee;
 
+    [Header("Orbit References")]
     public LineRenderer line;
     public Transform earth;
 
+    [Header("Orbit Data")]
+    public Vector3[] orbitPoints;
+    public float orbitalPeriod;
+    public float[] radii;
+    public float semiMajorAxis;
     float R_earth = 6371f;
+    float mu = 398600.4418f;
     float scale = 0.0006f;
     void Start()
     {
         DrawOrbit();
     }
 
-    void Update()
-    {
-        DrawOrbit();
-    }
-
-    void DrawOrbit() 
+    public void DrawOrbit() 
     {
         if(perigee > apogee)
         {
@@ -47,13 +50,19 @@ public class OrbitCalculator : MonoBehaviour
         float a = (r_a + r_p) / 2f;
         float e = (r_a - r_p) / (r_a + r_p);
 
+        orbitalPeriod = 2f * Mathf.PI * Mathf.Sqrt(a * a * a / mu);
+
         int segmants = 360;
         line.positionCount = segmants;
+        
+        orbitPoints = new Vector3[segmants];
+        radii = new float[segmants];
 
-        for(int i = 0; i < segmants; i++)
+        for (int i = 0; i < segmants; i++)
         {
             float nu = i * Mathf.Deg2Rad;
             float r = (a * (1 - e * e)) / (1 + e * Mathf.Cos(nu));
+            radii[i] = r;
 
             float x_p = r * Mathf.Cos(nu);
             float y_p = r * Mathf.Sin(nu);
@@ -61,7 +70,10 @@ public class OrbitCalculator : MonoBehaviour
 
             Vector3 eci = PerifocalToECI(perifocal, raan, inclination, argOfPerigee);
 
-            line.SetPosition(i, eci * scale + earth.position);
+            Vector3 worldPos = eci * scale + earth.position;
+
+            orbitPoints[i] = worldPos;
+            line.SetPosition(i, worldPos);
         }
     }
 
