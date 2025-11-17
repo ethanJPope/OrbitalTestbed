@@ -2436,6 +2436,7 @@ GameObject:
   - component: {fileID: 659090936}
   - component: {fileID: 659090938}
   - component: {fileID: 659090937}
+  - component: {fileID: 659090939}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -2561,6 +2562,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659090935}
   m_CullTransparentMesh: 1
+--- !u!114 &659090939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659090935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c164725c7320c741af87fcdca0f4abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: The RAAN is the direction hwere the satellite crosses Earth's equator
+    moving upward. It controls how the entire orbit is rotated around Earth.
 --- !u!1 &660495001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3146,6 +3161,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &938720189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 938720191}
+  - component: {fileID: 938720190}
+  m_Layer: 0
+  m_Name: TooltipManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &938720190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938720189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8dc513f1e827bd4dad91d770d204957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipPanel: {fileID: 1211729838}
+  tooltipText: {fileID: 416717709}
+--- !u!4 &938720191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938720189}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017585853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3450,7 @@ GameObject:
   - component: {fileID: 1167536809}
   - component: {fileID: 1167536811}
   - component: {fileID: 1167536810}
+  - component: {fileID: 1167536812}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -3514,6 +3576,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167536808}
   m_CullTransparentMesh: 1
+--- !u!114 &1167536812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167536808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c164725c7320c741af87fcdca0f4abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: The Argument of Perigee tells you where the closest point of the orbit
+    is located arround the Earth.
 --- !u!1 &1207115059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3713,7 +3789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 290.98, y: 5.5}
+  m_AnchoredPosition: {x: 290.98004, y: 2.7000122}
   m_SizeDelta: {x: -592.13, y: -395.074}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211729839
@@ -3765,6 +3841,7 @@ GameObject:
   - component: {fileID: 1290222362}
   - component: {fileID: 1290222364}
   - component: {fileID: 1290222363}
+  - component: {fileID: 1290222365}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -3890,6 +3967,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290222361}
   m_CullTransparentMesh: 1
+--- !u!114 &1290222365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290222361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c164725c7320c741af87fcdca0f4abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: The apogee is the farthest point from Earth in an orbit.
 --- !u!1 &1309901764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,7 +4050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitCalculator: {fileID: 1207115060}
-  speedMultiplier: 1
+  speedMultiplier: 500
 --- !u!135 &1368851778
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5311,6 +5401,7 @@ GameObject:
   - component: {fileID: 1929315478}
   - component: {fileID: 1929315480}
   - component: {fileID: 1929315479}
+  - component: {fileID: 1929315481}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -5436,6 +5527,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929315477}
   m_CullTransparentMesh: 1
+--- !u!114 &1929315481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929315477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c164725c7320c741af87fcdca0f4abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: The perigee is the closest point to Earth in an orbit.
 --- !u!1 &1973677854
 GameObject:
   m_ObjectHideFlags: 0
@@ -5447,6 +5551,7 @@ GameObject:
   - component: {fileID: 1973677855}
   - component: {fileID: 1973677857}
   - component: {fileID: 1973677856}
+  - component: {fileID: 1973677858}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -5572,6 +5677,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973677854}
   m_CullTransparentMesh: 1
+--- !u!114 &1973677858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973677854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c164725c7320c741af87fcdca0f4abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: The inclination is the tilt of the orbit relative to the Earth's equator.
 --- !u!1 &2088435464
 GameObject:
   m_ObjectHideFlags: 0
@@ -5711,3 +5829,4 @@ SceneRoots:
   - {fileID: 433947025}
   - {fileID: 1828673573}
   - {fileID: 1368851781}
+  - {fileID: 938720191}
